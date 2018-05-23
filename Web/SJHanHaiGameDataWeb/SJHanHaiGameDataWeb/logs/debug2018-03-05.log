@@ -1,0 +1,2 @@
+debug2018-03-05 01:53:08.751System.InvalidCastException: 无法将类型为“System.Collections.Generic.Dictionary`2[System.String,System.Object]”的对象强制转换为类型“System.Collections.Generic.Dictionary`2[System.String,System.String]”。
+   在 SJHanHaiGameDataWeb.UpdateServerInRecvZip.Page_Load(Object sender, EventArgs e) 位置 c:\Game\Web\SJHanHaiGameDataWeb\SJHanHaiGameDataWeb\UpdateServerInRecvZip.aspx.cs:行号 45
