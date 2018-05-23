@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D98D5D24-50E2-4479-BEF3-BFBB2C5EDEBC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>server</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UseDirectiveDefine.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UseDirectiveDefine.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\libuv\include;$(IncludePath);$(ProjectDir)\lua;$(ProjectDir)\lua\lua;$(ProjectDir)\lua\tolua;$(ProjectDir)\lua\luajit;$(ProjectDir)\lua\cjson;$(ProjectDir)\lua\tolua;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(ProjectDir)\libuv\src;$(ProjectDir)\libuv\src\win</LibraryPath>
+    <SourcePath>$(VC_SourcePath);$(ProjectDir)\lua;$(ProjectDir)\lua\lua;$(ProjectDir)\lua\tolua;$(ProjectDir)\lua\luajit;$(ProjectDir)\lua\cjson;$(ProjectDir)\lua\tolua;</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo "删除服务器目录待替换文件"
+echo "删除exe"
+del /Q $(ProjectDir)..\..\..\DBServer\*.exe
+del /Q $(ProjectDir)..\..\..\FEPServer\*.exe
+del /Q $(ProjectDir)..\..\..\GameServer\*.exe
+del /Q $(ProjectDir)..\..\..\HomeServer\*.exe
+del /Q $(ProjectDir)..\..\..\UpdateServer\*.exe
+echo "删除协议"
+del /Q $(ProjectDir)..\..\..\DBServer\Tools\MsgDef\*.lua
+del /Q $(ProjectDir)..\..\..\FEPServer\Tools\MsgDef\*.lua
+del /Q $(ProjectDir)..\..\..\GameServer\Tools\MsgDef\*.lua
+del /Q $(ProjectDir)..\..\..\HomeServer\Tools\MsgDef\*.lua
+del /Q $(ProjectDir)..\..\..\UpdateServer\Tools\MsgDef\*.lua
+echo "拷贝协议到服务器目录"
+xcopy $(ProjectDir)$(ProjectDir2Root)$(Root2ClientLuaRoot)$(ClientLuaMsgDef)*.lua $(ProjectDir)..\..\..\DBServer\Tools\MsgDef\ /E /F
+xcopy $(ProjectDir)$(ProjectDir2Root)$(Root2ClientLuaRoot)$(ClientLuaMsgDef)*.lua $(ProjectDir)..\..\..\FEPServer\Tools\MsgDef\ /E /F
+xcopy $(ProjectDir)$(ProjectDir2Root)$(Root2ClientLuaRoot)$(ClientLuaMsgDef)*.lua $(ProjectDir)..\..\..\GameServer\Tools\MsgDef\ /E /F
+xcopy $(ProjectDir)$(ProjectDir2Root)$(Root2ClientLuaRoot)$(ClientLuaMsgDef)*.lua $(ProjectDir)..\..\..\HomeServer\Tools\MsgDef\ /E /F
+xcopy $(ProjectDir)$(ProjectDir2Root)$(Root2ClientLuaRoot)$(ClientLuaMsgDef)*.lua $(ProjectDir)..\..\..\UpdateServer\Tools\MsgDef\ /E /F
+echo "拷贝exe到目标目录"
+copy $(TargetPath) $(ProjectDir)..\..\..\DBServer\
+copy $(TargetPath) $(ProjectDir)..\..\..\FEPServer\
+copy $(TargetPath) $(ProjectDir)..\..\..\GameServer\
+copy $(TargetPath) $(ProjectDir)..\..\..\HomeServer\
+copy $(TargetPath) $(ProjectDir)..\..\..\UpdateServer\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libuv\include\android-ifaddrs.h" />
+    <ClInclude Include="libuv\include\pthread-fixes.h" />
+    <ClInclude Include="libuv\include\stdint-msvc2008.h" />
+    <ClInclude Include="libuv\include\tree.h" />
+    <ClInclude Include="libuv\include\uv-aix.h" />
+    <ClInclude Include="libuv\include\uv-bsd.h" />
+    <ClInclude Include="libuv\include\uv-darwin.h" />
+    <ClInclude Include="libuv\include\uv-errno.h" />
+    <ClInclude Include="libuv\include\uv-linux.h" />
+    <ClInclude Include="libuv\include\uv-sunos.h" />
+    <ClInclude Include="libuv\include\uv-threadpool.h" />
+    <ClInclude Include="libuv\include\uv-unix.h" />
+    <ClInclude Include="libuv\include\uv-version.h" />
+    <ClInclude Include="libuv\include\uv-win.h" />
+    <ClInclude Include="libuv\include\uv.h" />
+    <ClInclude Include="libuv\src\heap-inl.h" />
+    <ClInclude Include="libuv\src\queue.h" />
+    <ClInclude Include="libuv\src\uv-common.h" />
+    <ClInclude Include="libuv\src\win\atomicops-inl.h" />
+    <ClInclude Include="libuv\src\win\handle-inl.h" />
+    <ClInclude Include="libuv\src\win\internal.h" />
+    <ClInclude Include="libuv\src\win\req-inl.h" />
+    <ClInclude Include="libuv\src\win\stream-inl.h" />
+    <ClInclude Include="libuv\src\win\winapi.h" />
+    <ClInclude Include="libuv\src\win\winsock.h" />
+    <ClInclude Include="LoadIni.h" />
+    <ClInclude Include="LuaHelp.h" />
+    <ClInclude Include="lua\cjson\fpconv.h" />
+    <ClInclude Include="lua\cjson\strbuf.h" />
+    <ClInclude Include="lua\lua.hpp" />
+    <ClInclude Include="lua\luajit\include\lauxlib.h" />
+    <ClInclude Include="lua\luajit\include\lua.h" />
+    <ClInclude Include="lua\luajit\include\luaconf.h" />
+    <ClInclude Include="lua\luajit\include\lualib.h" />
+    <ClInclude Include="lua\luasocket\auxiliar.h" />
+    <ClInclude Include="lua\luasocket\buffer.h" />
+    <ClInclude Include="lua\luasocket\except.h" />
+    <ClInclude Include="lua\luasocket\inet.h" />
+    <ClInclude Include="lua\luasocket\io.h" />
+    <ClInclude Include="lua\luasocket\mime.h" />
+    <ClInclude Include="lua\luasocket\select.h" />
+    <ClInclude Include="lua\luasocket\socket.h" />
+    <ClInclude Include="lua\luasocket\tcp.h" />
+    <ClInclude Include="lua\luasocket\timeout.h" />
+    <ClInclude Include="lua\luasocket\udp.h" />
+    <ClInclude Include="lua\luasocket\wsocket.h" />
+    <ClInclude Include="lua\lua\lapi.h" />
+    <ClInclude Include="lua\lua\lauxlib.h" />
+    <ClInclude Include="lua\lua\lcode.h" />
+    <ClInclude Include="lua\lua\ldebug.h" />
+    <ClInclude Include="lua\lua\ldo.h" />
+    <ClInclude Include="lua\lua\lfunc.h" />
+    <ClInclude Include="lua\lua\lgc.h" />
+    <ClInclude Include="lua\lua\llex.h" />
+    <ClInclude Include="lua\lua\llimits.h" />
+    <ClInclude Include="lua\lua\lmem.h" />
+    <ClInclude Include="lua\lua\lobject.h" />
+    <ClInclude Include="lua\lua\lopcodes.h" />
+    <ClInclude Include="lua\lua\lparser.h" />
+    <ClInclude Include="lua\lua\lstate.h" />
+    <ClInclude Include="lua\lua\lstring.h" />
+    <ClInclude Include="lua\lua\ltable.h" />
+    <ClInclude Include="lua\lua\ltm.h" />
+    <ClInclude Include="lua\lua\lua.h" />
+    <ClInclude Include="lua\lua\luaconf.h" />
+    <ClInclude Include="lua\lua\lualib.h" />
+    <ClInclude Include="lua\lua\lundump.h" />
+    <ClInclude Include="lua\lua\lvm.h" />
+    <ClInclude Include="lua\lua\lzio.h" />
+    <ClInclude Include="lua\tolua\tolua++.h" />
+    <ClInclude Include="lua\tolua\tolua_event.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TimeManage.h" />
+    <ClInclude Include="UVLoopPool.h" />
+    <ClInclude Include="UVSocket.h" />
+    <ClInclude Include="UVSocketManage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libuv\src\fs-poll.c" />
+    <ClCompile Include="libuv\src\inet.c" />
+    <ClCompile Include="libuv\src\threadpool.c" />
+    <ClCompile Include="libuv\src\uv-common.c" />
+    <ClCompile Include="libuv\src\version.c" />
+    <ClCompile Include="libuv\src\win\async.c" />
+    <ClCompile Include="libuv\src\win\core.c" />
+    <ClCompile Include="libuv\src\win\dl.c" />
+    <ClCompile Include="libuv\src\win\error.c" />
+    <ClCompile Include="libuv\src\win\fs-event.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\fs.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\getaddrinfo.c" />
+    <ClCompile Include="libuv\src\win\getnameinfo.c" />
+    <ClCompile Include="libuv\src\win\handle.c" />
+    <ClCompile Include="libuv\src\win\loop-watcher.c" />
+    <ClCompile Include="libuv\src\win\pipe.c" />
+    <ClCompile Include="libuv\src\win\poll.c" />
+    <ClCompile Include="libuv\src\win\process-stdio.c" />
+    <ClCompile Include="libuv\src\win\process.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\req.c" />
+    <ClCompile Include="libuv\src\win\signal.c" />
+    <ClCompile Include="libuv\src\win\stream.c" />
+    <ClCompile Include="libuv\src\win\tcp.c" />
+    <ClCompile Include="libuv\src\win\thread.c" />
+    <ClCompile Include="libuv\src\win\timer.c" />
+    <ClCompile Include="libuv\src\win\tty.c" />
+    <ClCompile Include="libuv\src\win\udp.c" />
+    <ClCompile Include="libuv\src\win\util.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\winapi.c" />
+    <ClCompile Include="libuv\src\win\winsock.c" />
+    <ClCompile Include="LoadIni.cpp" />
+    <ClCompile Include="LuaHelp.cpp" />
+    <ClCompile Include="lua\cjson\fpconv.c" />
+    <ClCompile Include="lua\cjson\strbuf.c" />
+    <ClCompile Include="lua\luasocket\auxiliar.c" />
+    <ClCompile Include="lua\luasocket\buffer.c" />
+    <ClCompile Include="lua\luasocket\except.c" />
+    <ClCompile Include="lua\luasocket\inet.c" />
+    <ClCompile Include="lua\luasocket\io.c" />
+    <ClCompile Include="lua\luasocket\mime.c" />
+    <ClCompile Include="lua\luasocket\select.c" />
+    <ClCompile Include="lua\luasocket\tcp.c" />
+    <ClCompile Include="lua\luasocket\timeout.c" />
+    <ClCompile Include="lua\luasocket\udp.c" />
+    <ClCompile Include="lua\luasocket\wsocket.c" />
+    <ClCompile Include="lua\lua\lapi.c" />
+    <ClCompile Include="lua\lua\lauxlib.c" />
+    <ClCompile Include="lua\lua\lbaselib.c" />
+    <ClCompile Include="lua\lua\lcode.c" />
+    <ClCompile Include="lua\lua\ldblib.c" />
+    <ClCompile Include="lua\lua\ldebug.c" />
+    <ClCompile Include="lua\lua\ldo.c" />
+    <ClCompile Include="lua\lua\ldump.c" />
+    <ClCompile Include="lua\lua\lfunc.c" />
+    <ClCompile Include="lua\lua\lgc.c" />
+    <ClCompile Include="lua\lua\linit.c" />
+    <ClCompile Include="lua\lua\liolib.c" />
+    <ClCompile Include="lua\lua\llex.c" />
+    <ClCompile Include="lua\lua\lmathlib.c" />
+    <ClCompile Include="lua\lua\lmem.c" />
+    <ClCompile Include="lua\lua\loadlib.c" />
+    <ClCompile Include="lua\lua\lobject.c" />
+    <ClCompile Include="lua\lua\lopcodes.c" />
+    <ClCompile Include="lua\lua\loslib.c" />
+    <ClCompile Include="lua\lua\lparser.c" />
+    <ClCompile Include="lua\lua\lstate.c" />
+    <ClCompile Include="lua\lua\lstring.c" />
+    <ClCompile Include="lua\lua\lstrlib.c" />
+    <ClCompile Include="lua\lua\ltable.c" />
+    <ClCompile Include="lua\lua\ltablib.c" />
+    <ClCompile Include="lua\lua\ltm.c" />
+    <ClCompile Include="lua\lua\lundump.c" />
+    <ClCompile Include="lua\lua\lvm.c" />
+    <ClCompile Include="lua\lua\lzio.c" />
+    <ClCompile Include="lua\lua\print.c" />
+    <ClCompile Include="lua\tolua\tolua_event.c" />
+    <ClCompile Include="lua\tolua\tolua_is.c" />
+    <ClCompile Include="lua\tolua\tolua_map.c" />
+    <ClCompile Include="lua\tolua\tolua_push.c" />
+    <ClCompile Include="lua\tolua\tolua_to.c" />
+    <ClCompile Include="server.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TimeManage.cpp" />
+    <ClCompile Include="Tools.cpp" />
+    <ClCompile Include="UVLoopPool.cpp" />
+    <ClCompile Include="UVSocket.cpp" />
+    <ClCompile Include="UVSocketManage.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

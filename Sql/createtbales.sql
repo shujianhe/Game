@@ -1,0 +1,11 @@
+--use HanHai_Web
+--							gameid体系系统标志  主键唯一性             db(中心控制)服务ip和端口                                     这个体系名称                          
+--create table DBServerInfo(gameid nvarchar(100) primary key,ServerIp nvarchar(100) not null, ServerProt int not null,ServerName nvarchar(100) unique)
+--					gameid	和dbserverinfo gameid 外键关系   网站地址web               平台(有可能要分平台)       客户端用于热更新的版本号  有可能支付  体系系列状态   
+--create table WebServerInfo(gameid nvarchar(100) not null,url nvarchar(MAX) not null,Platformid int not null,Clientversion int,Payway bit,status int,foreign key(gameid) references DBServerInfo(gameid) on delete cascade)
+--					玩家唯一id[全局唯一]						gameid																						平台最新登陆 1 window 2 android 3 ios 4 mac 5...   账号登陆名				账号密码						昵称						手机串码 唯一编码			    头像id			  性别 男 true 1 女 false 0  注册时间				最后登陆时间						注册地址(中国四川乐山...)		最后登陆地址		     绑定的手机号	  票据 验证合法性	
+--create table Account(AccountId nvarchar(100) primary key,gameid nvarchar(100) not null,foreign key(gameid) references DBServerInfo(gameid) on delete cascade,Platformid int not null,loginAccount nvarchar(100)not null,[password] nvarchar(100) not null,nikeName nvarchar(100),imei nvarchar(100) not null,imgid int not null,sex bit not null,createtime datetime not null,lastlogintime datetime not null,createArea nvarchar(300),lastArea nvarchar(1000),tel int,szToken nvarchar(MAX))
+--							玩家唯一id 主键+外键					消费人民币数		 当前金币(充值 游戏...)			  绑定金币(任务活动,救济等系列给出)
+--create table AccountMoeny(AccountId nvarchar(100) primary key,Moeny int not null,Gold int not null,BindGold int not null,foreign key(AccountId) references Account(AccountId) on delete cascade)
+--							   登陆用户名 				验证码			   创建修改时间	  用途标志	gameid
+--create table VerificationCode(account nvarchar(100),VerCode nvarchar(100),[time] time,Code int,gameid nvarchar(100))

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <ProjectDir2Root>..\..\..\..\</ProjectDir2Root>
+    <Root2ClientLuaRoot>Client\Product\ClientApp\src\</Root2ClientLuaRoot>
+    <ClientLuaMsgDef>MainApp\Data\MsgDef\</ClientLuaMsgDef>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="ProjectDir2Root">
+      <Value>$(ProjectDir2Root)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Root2ClientLuaRoot">
+      <Value>$(Root2ClientLuaRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ClientLuaMsgDef">
+      <Value>$(ClientLuaMsgDef)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

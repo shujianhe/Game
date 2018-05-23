@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="libuv">
+      <UniqueIdentifier>{dd5e20ab-94cc-471b-9389-c30923624ff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua">
+      <UniqueIdentifier>{bc58745d-45cd-4a6d-9e84-5ad05f4d6f85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadIni.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UVLoopPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UVSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\android-ifaddrs.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\pthread-fixes.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\stdint-msvc2008.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\tree.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-aix.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-bsd.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-darwin.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-errno.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-linux.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-sunos.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-threadpool.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-unix.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-version.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\include\uv-win.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\heap-inl.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\queue.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\uv-common.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\atomicops-inl.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\handle-inl.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\internal.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\req-inl.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\stream-inl.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\winapi.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="libuv\src\win\winsock.h">
+      <Filter>libuv</Filter>
+    </ClInclude>
+    <ClInclude Include="UVSocketManage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaHelp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\cjson\fpconv.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\cjson\strbuf.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lapi.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lauxlib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lcode.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\ldebug.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\ldo.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lfunc.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lgc.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\llex.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\llimits.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lmem.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lobject.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lopcodes.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lparser.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lstate.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lstring.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\ltable.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\ltm.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lua.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\luaconf.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lualib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lundump.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lvm.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua\lzio.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua.hpp">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luajit\include\lauxlib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luajit\include\lua.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luajit\include\luaconf.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luajit\include\lualib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\auxiliar.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\buffer.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\except.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\inet.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\io.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\mime.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\select.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\socket.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\tcp.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\timeout.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\udp.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luasocket\wsocket.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\tolua\tolua++.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\tolua\tolua_event.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadIni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UVLoopPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UVSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\fs-poll.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\inet.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\threadpool.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\uv-common.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\version.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\async.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\core.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\dl.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\error.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\fs.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\fs-event.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\getaddrinfo.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\getnameinfo.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\handle.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\loop-watcher.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\pipe.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\poll.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\process.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\process-stdio.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\req.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\signal.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\stream.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\tcp.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\thread.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\timer.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\tty.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\udp.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\util.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\winapi.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="libuv\src\win\winsock.c">
+      <Filter>libuv</Filter>
+    </ClCompile>
+    <ClCompile Include="UVSocketManage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaHelp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\cjson\fpconv.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\cjson\strbuf.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lapi.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lauxlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lbaselib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lcode.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ldblib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ldebug.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ldo.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ldump.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lfunc.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lgc.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\linit.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\liolib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\llex.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lmathlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lmem.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\loadlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lobject.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lopcodes.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\loslib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lparser.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lstate.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lstring.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lstrlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ltable.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ltablib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\ltm.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lundump.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lvm.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\lzio.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\lua\print.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\auxiliar.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\buffer.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\except.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\inet.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\io.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\mime.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\tcp.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\timeout.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\udp.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\wsocket.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\tolua\tolua_event.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\tolua\tolua_is.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\tolua\tolua_map.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\tolua\tolua_push.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\tolua\tolua_to.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\luasocket\select.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

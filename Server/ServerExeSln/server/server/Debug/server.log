@@ -1,0 +1,270 @@
+﻿生成启动时间为 2018/5/2 2:57:53。
+     1>项目“F:\Pro\Game\Server\ServerExeSln\server\server\server.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of inet.c will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are libuv\src\inet.c, lua\luasocket\inet.c.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of tcp.c will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are libuv\src\win\tcp.c, lua\luasocket\tcp.c.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of udp.c will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are libuv\src\win\udp.c, lua\luasocket\udp.c.
+     1>ClCompile:
+         D:\Program Files (x86)\VS\2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\server.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\VS\2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "libuv\src\fs-poll.c" libuv\src\inet.c libuv\src\threadpool.c "libuv\src\uv-common.c" libuv\src\version.c libuv\src\win\async.c libuv\src\win\core.c libuv\src\win\dl.c libuv\src\win\error.c libuv\src\win\getaddrinfo.c libuv\src\win\getnameinfo.c libuv\src\win\handle.c "libuv\src\win\loop-watcher.c" libuv\src\win\pipe.c libuv\src\win\poll.c "libuv\src\win\process-stdio.c" libuv\src\win\req.c libuv\src\win\signal.c libuv\src\win\stream.c libuv\src\win\tcp.c libuv\src\win\thread.c libuv\src\win\timer.c libuv\src\win\tty.c libuv\src\win\udp.c libuv\src\win\winapi.c libuv\src\win\winsock.c lua\cjson\fpconv.c lua\cjson\strbuf.c lua\luasocket\auxiliar.c lua\luasocket\buffer.c lua\luasocket\except.c lua\luasocket\inet.c lua\luasocket\io.c lua\luasocket\mime.c lua\luasocket\select.c lua\luasocket\tcp.c lua\luasocket\timeout.c lua\luasocket\udp.c lua\luasocket\wsocket.c lua\lua\lapi.c lua\lua\lauxlib.c lua\lua\lbaselib.c lua\lua\lcode.c lua\lua\ldblib.c lua\lua\ldebug.c lua\lua\ldo.c lua\lua\ldump.c lua\lua\lfunc.c lua\lua\lgc.c lua\lua\linit.c lua\lua\liolib.c lua\lua\llex.c lua\lua\lmathlib.c lua\lua\lmem.c lua\lua\loadlib.c lua\lua\lobject.c lua\lua\lopcodes.c lua\lua\loslib.c lua\lua\lparser.c lua\lua\lstate.c lua\lua\lstring.c lua\lua\lstrlib.c lua\lua\ltable.c lua\lua\ltablib.c lua\lua\ltm.c lua\lua\lundump.c lua\lua\lvm.c lua\lua\lzio.c lua\lua\print.c lua\tolua\tolua_event.c lua\tolua\tolua_is.c lua\tolua\tolua_map.c lua\tolua\tolua_push.c lua\tolua\tolua_to.c
+         tolua_to.c
+         tolua_push.c
+         tolua_map.c
+         tolua_is.c
+         tolua_event.c
+         print.c
+         lzio.c
+         lvm.c
+         lundump.c
+         ltm.c
+         ltablib.c
+         ltable.c
+         lstrlib.c
+         lstring.c
+         lstate.c
+         lparser.c
+         loslib.c
+         lopcodes.c
+         lobject.c
+         loadlib.c
+         正在生成代码...
+         正在编译...
+         lmem.c
+         lmathlib.c
+         llex.c
+         liolib.c
+         linit.c
+         lgc.c
+         lfunc.c
+         ldump.c
+         ldo.c
+         ldebug.c
+         ldblib.c
+         lcode.c
+         lbaselib.c
+         lauxlib.c
+         lapi.c
+         wsocket.c
+     1>f:\pro\game\server\serverexesln\server\server\lua\luasocket\wsocket.c(431): warning C4133: “return”: 从“WCHAR *”到“const char *”的类型不兼容
+         udp.c
+     1>f:\pro\game\server\serverexesln\server\server\lua\luasocket\udp.c(181): warning C4133: “函数”: 从“WCHAR *”到“const char *”的类型不兼容
+     1>f:\pro\game\server\serverexesln\server\server\lua\luasocket\udp.c(251): warning C4133: “函数”: 从“WCHAR *”到“const char *”的类型不兼容
+         timeout.c
+         tcp.c
+         select.c
+         正在生成代码...
+         正在编译...
+         mime.c
+         io.c
+         inet.c
+     1>f:\pro\game\server\serverexesln\server\server\lua\luasocket\inet.c(254): warning C4133: “函数”: 从“WCHAR *”到“const char *”的类型不兼容
+     1>f:\pro\game\server\serverexesln\server\server\lua\luasocket\inet.c(288): warning C4133: “函数”: 从“WCHAR *”到“const char *”的类型不兼容
+         except.c
+         buffer.c
+         auxiliar.c
+         strbuf.c
+         fpconv.c
+         winsock.c
+         winapi.c
+         udp.c
+         tty.c
+         timer.c
+         thread.c
+         tcp.c
+         stream.c
+         signal.c
+         req.c
+         process-stdio.c
+         poll.c
+         正在生成代码...
+         正在编译...
+         pipe.c
+         loop-watcher.c
+         handle.c
+         getnameinfo.c
+         getaddrinfo.c
+         error.c
+         dl.c
+         core.c
+         async.c
+         version.c
+         uv-common.c
+         threadpool.c
+         inet.c
+         fs-poll.c
+         正在生成代码...
+         D:\Program Files (x86)\VS\2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "libuv\src\win\fs-event.c" libuv\src\win\fs.c libuv\src\win\process.c libuv\src\win\util.c
+         util.c
+         process.c
+         fs.c
+         fs-event.c
+         正在生成代码...
+         D:\Program Files (x86)\VS\2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LoadIni.cpp LuaHelp.cpp server.cpp TimeManage.cpp Tools.cpp UVLoopPool.cpp UVSocket.cpp UVSocketManage.cpp
+         UVSocketManage.cpp
+     1>f:\pro\game\server\serverexesln\server\server\uvsocketmanage.cpp(156): warning C4018: “>”: 有符号/无符号不匹配
+         UVSocket.cpp
+         UVLoopPool.cpp
+         Tools.cpp
+         TimeManage.cpp
+     1>f:\pro\game\server\serverexesln\server\server\timemanage.cpp(32): warning C4244: “=”: 从“LONGLONG”转换到“double”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\timemanage.cpp(59): warning C4244: “=”: 从“LONGLONG”转换到“double”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\timemanage.cpp(62): warning C4244: “参数”: 从“double”转换到“DWORD”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\timemanage.cpp(64): warning C4244: “参数”: 从“double”转换到“DWORD”，可能丢失数据
+         server.cpp
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(14): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(25): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(34): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(36): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(42): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(50): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(110): warning C4244: “初始化”: 从“lua_Number”转换到“int”，可能丢失数据
+     1>f:\pro\game\server\serverexesln\server\server\server.cpp(141): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+         LuaHelp.cpp
+     1>f:\pro\game\server\serverexesln\server\server\luahelp.cpp(47): warning C4101: “d”: 未引用的局部变量
+         LoadIni.cpp
+     1>f:\pro\game\server\serverexesln\server\server\loadini.cpp(41): warning C4018: “>”: 有符号/无符号不匹配
+         正在生成代码...
+       Link:
+         D:\Program Files (x86)\VS\2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Pro\Game\Server\ServerExeSln\server\Debug\server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Pro\Game\Server\ServerExeSln\server\Debug\server.lib" /MACHINE:X86 "Debug\fs-poll.obj"
+         Debug\inet.obj
+         Debug\threadpool.obj
+         "Debug\uv-common.obj"
+         Debug\version.obj
+         Debug\async.obj
+         Debug\core.obj
+         Debug\dl.obj
+         Debug\error.obj
+         "Debug\fs-event.obj"
+         Debug\fs.obj
+         Debug\getaddrinfo.obj
+         Debug\getnameinfo.obj
+         Debug\handle.obj
+         "Debug\loop-watcher.obj"
+         Debug\pipe.obj
+         Debug\poll.obj
+         "Debug\process-stdio.obj"
+         Debug\process.obj
+         Debug\req.obj
+         Debug\signal.obj
+         Debug\stream.obj
+         Debug\tcp.obj
+         Debug\thread.obj
+         Debug\timer.obj
+         Debug\tty.obj
+         Debug\udp.obj
+         Debug\util.obj
+         Debug\winapi.obj
+         Debug\winsock.obj
+         Debug\LoadIni.obj
+         Debug\LuaHelp.obj
+         Debug\fpconv.obj
+         Debug\strbuf.obj
+         Debug\auxiliar.obj
+         Debug\buffer.obj
+         Debug\except.obj
+         Debug\inet.obj
+         Debug\io.obj
+         Debug\mime.obj
+         Debug\select.obj
+         Debug\tcp.obj
+         Debug\timeout.obj
+         Debug\udp.obj
+         Debug\wsocket.obj
+         Debug\lapi.obj
+         Debug\lauxlib.obj
+         Debug\lbaselib.obj
+         Debug\lcode.obj
+         Debug\ldblib.obj
+         Debug\ldebug.obj
+         Debug\ldo.obj
+         Debug\ldump.obj
+         Debug\lfunc.obj
+         Debug\lgc.obj
+         Debug\linit.obj
+         Debug\liolib.obj
+         Debug\llex.obj
+         Debug\lmathlib.obj
+         Debug\lmem.obj
+         Debug\loadlib.obj
+         Debug\lobject.obj
+         Debug\lopcodes.obj
+         Debug\loslib.obj
+         Debug\lparser.obj
+         Debug\lstate.obj
+         Debug\lstring.obj
+         Debug\lstrlib.obj
+         Debug\ltable.obj
+         Debug\ltablib.obj
+         Debug\ltm.obj
+         Debug\lundump.obj
+         Debug\lvm.obj
+         Debug\lzio.obj
+         Debug\print.obj
+         Debug\tolua_event.obj
+         Debug\tolua_is.obj
+         Debug\tolua_map.obj
+         Debug\tolua_push.obj
+         Debug\tolua_to.obj
+         Debug\server.obj
+         Debug\stdafx.obj
+         Debug\TimeManage.obj
+         Debug\Tools.obj
+         Debug\UVLoopPool.obj
+         Debug\UVSocket.obj
+         Debug\UVSocketManage.obj
+     1>Debug\inet.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+     1>Debug\tcp.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+     1>Debug\udp.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+         server.vcxproj -> F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe
+       PostBuildEvent:
+         echo "删除服务器目录待替换文件"
+         echo "删除exe"
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\DBServer\*.exe
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\FEPServer\*.exe
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\GameServer\*.exe
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\HomeServer\*.exe
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\UpdateServer\*.exe
+         echo "删除协议"
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\DBServer\Tools\MsgDef\*.lua
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\FEPServer\Tools\MsgDef\*.lua
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\GameServer\Tools\MsgDef\*.lua
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\HomeServer\Tools\MsgDef\*.lua
+         del /Q F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\UpdateServer\Tools\MsgDef\*.lua
+         echo "拷贝协议到服务器目录"
+         xcopy F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\..\Client\Product\ClientApp\src\MainApp\Data\MsgDef\*.lua F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\DBServer\Tools\MsgDef\ /E /F
+         xcopy F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\..\Client\Product\ClientApp\src\MainApp\Data\MsgDef\*.lua F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\FEPServer\Tools\MsgDef\ /E /F
+         xcopy F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\..\Client\Product\ClientApp\src\MainApp\Data\MsgDef\*.lua F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\GameServer\Tools\MsgDef\ /E /F
+         xcopy F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\..\Client\Product\ClientApp\src\MainApp\Data\MsgDef\*.lua F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\HomeServer\Tools\MsgDef\ /E /F
+         xcopy F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\..\Client\Product\ClientApp\src\MainApp\Data\MsgDef\*.lua F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\UpdateServer\Tools\MsgDef\ /E /F
+         echo "拷贝exe到目标目录"
+         copy F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\DBServer\
+         copy F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\FEPServer\
+         copy F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\GameServer\
+         copy F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\HomeServer\
+         copy F:\Pro\Game\Server\ServerExeSln\server\Debug\server.exe F:\Pro\Game\Server\ServerExeSln\server\server\..\..\..\UpdateServer\
+         :VCEnd
+         "删除服务器目录待替换文件"
+         "删除exe"
+         "删除协议"
+         "拷贝协议到服务器目录"
+         复制了 0 个文件
+         找不到文件 - *.lua
+         复制了 0 个文件
+         找不到文件 - *.lua
+         找不到文件 - *.lua
+         复制了 0 个文件
+         找不到文件 - *.lua
+         复制了 0 个文件
+         找不到文件 - *.lua
+         复制了 0 个文件
+         "拷贝exe到目标目录"
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+     1>已完成生成项目“F:\Pro\Game\Server\ServerExeSln\server\server\server.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:18.40
